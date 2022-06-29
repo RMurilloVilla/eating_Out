@@ -63,9 +63,9 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-Based off of the daya table on top, more white dine out compared to the other (black & other). White's dine out more by 14.07 compared to black people. White's dine out more by 10.99 compared to other people. This data table only firther proves that there is a difference between the 3 options. White dines out more. 
+Based off of the data table on top, more white dine out compared to the other (black & other). White's dine out more by 14.07 compared to black people. White's dine out more by 10.99 compared to other people. This data table only further proves that there is a difference between the 3 options. White dines out more. 
 
-
+## Inferential Results
 
 
 ```{r}
@@ -73,3 +73,15 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+
+The p-value is 0.000002287. The p-value is too small so we have to reject the null hypothesis. There is a difference between race and how frequent they dine out. That's what the chi squared test gave us.
+
+## Fisher
+
+```{r}
+fisherXY(mydata$race,mydata$eatout, printAll = TRUE)
+```
+
+The p-value is less then 0.05 therefore we fail to reject.
+
+# Conclusion
