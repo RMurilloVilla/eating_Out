@@ -43,7 +43,17 @@ Inference: chi=squared and fisher exact tests
 
 # Descriptive Summaries
 
-## Graphical Summary
+## Graphical Descriptive Summary
 
+### Bar Chart
 
+```{r}
+barchartGC(~race + eatout,data=mydata)
+barchartGC(~race + eatout,data=mydata, type="percent")
+
+```
+
+White tend to be the outlier in this bar plot. Since their percent of dining out is the highest (close to 85% of white people dine out according to this bar plot). Black and other are relatively the same with "other" only being a slightly higher. 
+
+## Numcerical Descriptive Summary
 
